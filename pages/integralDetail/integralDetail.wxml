@@ -1,0 +1,33 @@
+<!--pages/integralDetail/integralDetail.wxml-->
+<view class="container">
+  <image src="../images/detail_bg.png" class="detail-bg"></image>
+
+  <view class="detail-box">
+
+    <view class="detal-box-btn">
+      <image src='../images/detal_btn.png' class="detal-btn"></image>
+      <text class="detal-btn-title">积分明细</text>
+    </view>
+
+    <scroll-view class="integralDetail-box" scroll-y='false' bindscrolltolower='lower' lower-threshold="50">
+     <view class="detail-centent" wx:for="{{dataList}}" wx:key>
+        <view class="detail-left">
+          <text style='text-align:left'>{{item.integralnote}}</text>
+          <text>{{item.integraldate}}</text>
+        </view>
+        <view class="detail-right">
+          <text style="color:green;">+{{item.validintegral}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+
+
+
+
+
+
+
+  </view>
+
+</view>

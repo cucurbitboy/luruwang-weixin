@@ -1,0 +1,154 @@
+/* pages/sindex/sindex.wxss */
+@import "../../weui.wxss";
+
+.page-body{
+  width: 100%;
+}
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+swiper {
+  height: 250rpx;
+}
+.navigator-hover{
+  color:blue;
+}
+
+/*第一部分*/
+
+/*公共部分*/
+.index_part {
+  width: 100%;
+  height: 260rpx;
+  position: relative;
+  box-shadow: 20rpx 20rpx 20rpx #e5e5e5;
+  /* border-radius: 10rpx; */
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.indexbg {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10rpx; */
+  font-size: 0;
+  z-index: 0;
+}
+
+/*用户信息*/
+.userinfo {
+  z-index: 1;
+  position:absolute;
+  left:60rpx;
+  top:70rpx;
+
+}
+
+.userinfo-box {
+  /*垂直居中*/
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-avatar-box {
+  /*垂直水平居中*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 131rpx;
+  height: 131rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.userinfo-avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  font-size: 0;
+  overflow: hidden;
+}
+.name-money-box{
+   margin-left:20rpx;
+}
+.name-money-box image{
+  width:76rpx;
+  height:56rpx;
+  display: block;
+  float:left;
+}
+.money-box{
+  overflow: hidden;
+}
+.money-box text{
+  float:left;
+  color:#fff;
+  font-size:28rpx;
+  margin-top:14rpx;
+}
+
+.userinfo-nickname {
+  margin-left:10rpx;
+  color: #fff;
+}
+
+/*我的入口*/
+.index-user-icon-box{
+  position: absolute;
+  z-index: 1;
+  top:30rpx;
+  right:40rpx;
+
+}
+.index-user-icon-box image{
+  width:60rpx;
+  height:60rpx;
+}
+
+
+
+/*打卡提现*/
+.signIn-withdrawDeposit{
+  position: absolute;
+  z-index: 1;
+  bottom:30rpx;
+  right: 40rpx;
+
+}
+
+.signIn-withdrawDeposit text{
+  display:inline-block;
+  color:#fff;
+  height:50rpx;
+  line-height: 50rpx;
+  margin-left:30rpx;
+  font:34rpx;
+
+}
+
+.signIn-withdrawDeposit text:nth-child(1){
+  border-right: solid 1rpx #fff;
+  padding-right: 30rpx;
+}
+.signIn-withdrawDeposit text:nth-child(2){
+  margin-right:30rpx;
+}
+
+

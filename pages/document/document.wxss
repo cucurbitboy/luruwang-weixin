@@ -1,0 +1,25 @@
+/* pages/document/document.wxss */
+.document{
+  padding: 30rpx;
+}
+.document-head{
+  font-size: 45rpx;
+  color: #555;
+  text-align: center;
+}
+.doc-txt{
+  color: #999;
+  font-size: 30rpx;
+  margin: 30rpx 0;
+  text-align: justify;
+  line-height: 40rpx;
+}
+.doc-tit{
+  color: #666;
+  font-size: 30rpx;
+  margin: 10rpx 0
+}
+.rred{
+  font-weight: bold;
+  color: #f00;
+}

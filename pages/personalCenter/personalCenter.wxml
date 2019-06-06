@@ -1,0 +1,137 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class="container">
+
+  <!--头部-->
+  <view class="header">
+    <view class="header-img-box">
+      <image src="../images/personalCenter_bg.jpg"></image>
+    </view>
+    <!--用户信息-->
+    <view class="userinfo x-y-center">
+
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+
+      <!-- <block wx:else> -->
+
+        <view class="userinfo-box">
+
+          <view class="userinfo-avatar-box">
+            <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+          </view>
+
+          <view class="name-money-box" catchtap='goIntegralDetail'>
+            <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+            <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
+          </view>
+        </view>
+
+      <!-- </block> -->
+
+
+    </view>
+
+
+  </view>
+
+  <!--body-->
+  <view class="body">
+
+
+     <!-- <view class="list" bindtap='goRank'>
+        <image src='../images/rank_btn.png'></image>
+        <text>排位</text>
+        <image src='../images/jiantou.png'></image>
+     </view>
+
+
+     <view class="list" bindtap="InvitationCode">
+        <image src='../images/personal_.png'></image>
+        <text>邀请码</text>
+        <image src='../images/jiantou.png'></image>
+     </view> -->
+
+
+    <view class="list" style='border:none;' bindtap='ModShow'>
+        <image src='../images/telephone.png'></image>
+        <text>手机号码登录</text>
+        <text class='myphone'>{{telphone}}</text>
+        <image src='../images/jiantou.png'></image>
+     </view>
+     <view class="list" style='border:none;' bindtap='ModShowtwo'>
+        <image src='../images/telephone.png'></image>
+        <text>修改手机号码</text>
+        <image src='../images/jiantou.png'></image>
+     </view>
+
+     <view class="cut-off-rule"></view>
+
+    <view class="list" bindtap='goMonitor' wx:if="{{ showMort && telphone}}">
+        <image src='../images/monitor.png'></image>
+        <text>监控</text>
+        <image src='../images/jiantou.png'></image>
+     </view>
+
+
+
+
+  </view>
+</view>
+
+<!-- 登录 -->
+  <view class="black-model x-center " wx:if="{{modelShow}}">
+      <view class="model-content">
+          <view class="close-btn" catchtap='modelHide'>
+            <image src="../images/close_btn.png"></image>
+          </view>
+
+          <view class="phone-box yanz" style="margin-top:56rpx;">
+            <text class="yanz-title">手机号</text>
+            <input placeholder='请输入手机号' value="" bindinput="getPhone" type='number' maxlength='16' auto-focus confirm-type="完成"   confirm-hold="true"/>
+          </view>
+
+          <view class="yzm-box yanz">
+            <text class="yanz-title">密码</text>
+            <input placeholder='请输入密码' type='password' bindinput="fillCode" />
+          </view>
+
+          <view class="save-btn">
+             <button bindtap='submitbtn'>登陆</button>
+          </view>
+
+
+      </view>
+
+
+  </view>
+
+  <!-- 更换手机号 -->
+  <view class="black-model x-center " wx:if="{{modelShowtwo}}">
+      <view class="model-content">
+          <view class="close-btn" catchtap='modelHide'>
+            <image src="../images/close_btn.png"></image>
+          </view>
+
+          <view class="phone-box yanz" style="margin-top:56rpx;">
+            <text class="yanz-title">手机号</text>
+            <input placeholder='请输入手机号' value="" bindinput="getnewPhone" type='number' maxlength='16' auto-focus confirm-type="完成"   confirm-hold="true"/>
+          </view>
+
+          <view class="yzm-box yanz">
+            <text class="yanz-title">验证码</text>
+            <input placeholder='请输入验证码' type='number' bindinput="yzcode" />
+            <button class="yzm-btn" disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+          </view>
+
+          <view class="save-btn">
+             <button bindtap='removeipone'>确认修改</button>
+          </view>
+
+
+      </view>
+      <!-- <view class='loayout'>
+        <text>退出</text>
+      </view> -->
+
+
+  </view>

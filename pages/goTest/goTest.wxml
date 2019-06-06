@@ -1,0 +1,67 @@
+<!--pages/goTest/goTest.wxml-->
+<view class="container">
+  <view class="taskTest-bg">
+    <image src="../images/task_page_bg.png"></image>
+  </view>
+  <view class="taskTest-content">
+    <!-- <view class="content-top" wx:if="{{dotasktype==1}}">
+      <text>目前正确率</text>
+      <text>{{accuracy}}</text>
+    </view> -->
+    <view class="content-top">
+      <text>今日提交量 : </text>
+      <text>{{submitReport}}</text>
+      <text>倒计时: </text>
+      <text class="{{isred ? 'red' : ''}}">{{timer}} s</text>
+    </view>
+
+    <!-- <view class="timer x-y-center">
+      <text class="{{isred ? 'red' : ''}}">{{timer}} s</text>
+    </view> -->
+    <!-- <view class="arrow-right" wx:if="{{isnext}}" bindtap='goNext'>
+      <image mode='{{arrowRight}}' src="../images/arrowRight.png"></image>
+    </view> -->
+
+<!-- <scroll-view scroll-y="true" style="height: 50%;"> -->
+<scroll-view scroll-y="true" class="{{isinput? 'smallheight':'bigheight'}}">
+    <view class="content-box">
+      <view class="img-content">
+
+        <textarea class="img-box" disabled="true">
+          <image mode='{{showImage}}' src="{{imgDate}}"></image>
+        </textarea>
+        <!-- 录入 -->
+          <view wx:if="{{isinput}}">
+          <view wx:if="{{!isshowReal}}">
+            <!-- <text class='input-title'>{{inputTitle}}</text> -->
+            <!-- 录入数字 -->
+            <view class='lurukuang' wx:if="{{inputype == 'number'}}">
+              <text class='numberTxt'>{{inputvalues}}</text>
+            </view>
+            <!-- 录入文字 -->
+            <view class='lurukuang' wx:elif="{{inputype == 'text'}}">
+              <input class='userwrite' value="{{inputvalues}}" bindinput="getuserWrite" type="text" focus="{{focus}}" auto-focus bindblur='writevalue' bindconfirm="SubmitTrainingtests" confirm-type="next" confirm-hold="true" />
+            </view>
+
+            <!-- <text class='input-tip'>小提示</text> -->
+          </view>
+        </view>
+        <!-- 选择 -->
+        <view wx:else>
+
+        <scroll-view class="cheose-value" scroll-y="true" wx:if="{{!isshowReal}}">
+          <view class='flexbox'>
+            <view class="didarr {{item.key == thiskey?'active':''}}" wx:key wx:for="{{tasklist}}" data-index="{{index}}" data-key="{{item.key}}" bindtap='choseValue'>
+            <text>{{item.value}}</text>
+          </view>
+          </view>
+        </scroll-view>
+        </view>
+        <!-- <button bindtap='submittask' class="submit-btn">{{submitTest}}</button> -->
+      </view>
+    </view>
+  </scroll-view>
+    <!-- 手机软盘数字型 -->
+      <my-component wx:if="{{inputype == 'number' && !isshowReal && isinput}}" bindok="inputOk" binddelete="inputdelete" bindinputchange="inputChange" key-board-type="{{keyBoardType}}" backgroundColor="white" />
+  </view>
+</view>

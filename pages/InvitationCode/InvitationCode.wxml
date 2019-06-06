@@ -1,0 +1,100 @@
+<!--pages/InvitationCode/InvitationCode.wxml-->
+<view class="container">
+
+  <view class="please-bg">
+    <image src="../images/please_bg.png"></image>
+  </view>
+
+  <view class="please-content ">
+
+    <view class="please-title-img x-y-center">
+      <image src="../images/please.png"></image>
+    </view>
+
+    <view class="please-title">
+      <text>邀请好友做任务，可得好友金币的{{commission}}%</text>
+    </view>
+
+    <view class="left-right-content">
+      <view class="left-content x-y-center">
+        <view class="left-box">
+          <image src="../images/index_money_icon.png"></image>
+          <text>{{integral}}积分</text>
+        </view>
+      </view>
+      <view class="right-content x-y-center" bindtap='personNum'>
+        <view class="right-box">
+          <image src="../images/personal_white.png"></image>
+          <text>{{renshu}}人数</text>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="invitationCode-box x-center">
+
+      <view class="userinfo x-y-center">
+
+        <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+
+        <block wx:else> -->
+
+          <view class="userinfo-box">
+
+            <view class="userinfo-avatar-box">
+              <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+             <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+            </view>
+
+            <view class="name-money-box" catchtap='goIntegralDetail'>
+              <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+              <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
+            </view>
+          </view>
+
+        <!-- </block> -->
+
+
+      </view>
+
+      <view class="codeNum-box">
+        <text>{{invitationCodeNum}}</text>
+        <text>(您的专属邀请码)</text>
+      </view>
+
+
+    </view>
+
+    <!-- <view class="writeIn">
+      <text>填写推荐你的人的邀请码，没有可以不填写</text>
+      <input type="number" placeholder='请在此处输入推荐你的人的邀请码' placeholder-style='font-size:30rpx;' />
+    </view> -->
+
+
+
+  </view>
+  <view class="explanation" bindtap='godocument'>此规则说明归啪啦云所有</view>
+
+    <view class="close-btn" catchtap='closeHide'  wx:if="{{showHide}}" >
+      <image src="../images/close-black.png"></image>
+    </view>
+
+
+  <scroll-view class="integralDetail-box" scroll-y='false' wx:if="{{showHide}}"  bindscrolltolower='lower' lower-threshold="50">
+
+
+    <view class="detail-centent" wx:for="{{detailItems}}" wx:key="unique">
+      <view class="detail-left">
+        <text>{{item.detailType}} </text>
+        <text>{{item.detailTime}}</text>
+      </view>
+
+      <view class="detail-right">
+        <text>{{item.detailNum}}</text>
+      </view>
+
+    </view>
+  </scroll-view>
+
+
+</view>

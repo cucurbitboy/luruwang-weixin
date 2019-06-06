@@ -1,0 +1,70 @@
+/* pages/monitor/monitor.wxss */
+@import '../../weui.wxss';
+
+.section__title {
+  padding-left: 4%;
+  box-sizing: border-box;
+  color: red;
+}
+
+.section {
+  width: 100%;
+  margin-top: 30rpx;
+  display: block;
+}
+
+.picker {
+  margin-top: 10rpx;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding-left: 4%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.canvas {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 200px;
+}
+
+.canvas-child {
+  margin-top: 70rpx;
+  width: 100%;
+}
+
+.canvas-child:nth-child(1) {
+  margin-top: 50rpx;
+}
+
+.monitorList {
+  padding: 20rpx 10rpx 20rpx 10rpx;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.monitorList>scroll-view{
+  width: 100%;
+  height: 300rpx;
+}
+
+.radio {
+  margin: 10rpx;
+  display: inline-block;
+  width: 47%;
+  overflow: hidden;
+  height:70rpx;
+}
+.monitorList radio{
+  margin: 10rpx 0
+}
+
+
+ec-canvas {
+  width: 100%;
+  height: 800rpx;
+}

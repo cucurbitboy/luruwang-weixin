@@ -1,0 +1,114 @@
+/* pages/goRank/goRank.wxss */
+@import "../../lib/weui.wxss";
+.container{
+  background: #fff;
+}
+.rankTab{
+  width:60%;
+  margin-top:42rpx;
+}
+.default{
+  display: inline-block;
+  width:50%;
+  height:60rpx;
+  line-height: 60rpx;
+  background: #ccc;
+  color:#fff;
+  text-align: center;
+}
+.blue{
+  display: inline-block;
+  width:50%;
+  height:60rpx;
+  line-height: 60rpx;
+  background: #3640c6;
+  color:#fff;
+  text-align: center;
+
+
+}
+.rankTab text:first-child{
+  border-radius: 10rpx 0 0 10rpx;
+}
+
+.rankTab text:last-child{
+  border-radius: 0 10rpx 10rpx 0;
+}
+.show{
+  display:block;
+  width: 100%;
+  }
+.hidden{
+  display:none;
+  width: 100%;
+
+}
+.myranks{
+    margin-top:24rpx;
+    padding: 20rpx 30rpx;
+    width: 100%;
+    text-align: center
+}
+.thead{
+  display:flex;
+  flex-direction:row;
+  border-top:solid 1rpx #959595;
+  border-bottom:solid 1rpx #e9e9e9;
+  width: 100%;
+  background: #fff;
+}
+.thead text{
+  
+  flex:1;
+  line-height:70rpx;
+  text-align:center;
+  font-weight:bold;
+  font-size:28rpx;
+}
+.items{
+  display:flex;
+  flex-direction:row;
+
+}
+.metc{
+  text-align: center;
+  padding: 10rpx;
+  width: 100%
+}
+
+.items view{
+  flex:1;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+}
+.headPortrait{
+  height:80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-top:15rpx;
+}
+.item-container:nth-of-type(odd){
+  background: #f9f9f9;
+}
+.rankIntegral{
+  color:#3640c6;
+}
+.item-container .rankNum{
+  color:#b4b4b4;
+  font-weight: 600;
+}
+.item-container:nth-child(2) .rankNum{
+  color:red;
+}
+
+.item-container:nth-child(3) .rankNum{
+  color:#ff0d0d;
+}
+
+.item-container:nth-child(4) .rankNum{
+  color:#c3ce2c;
+}
+.item-container:nth-child(5) .rankNum{
+  color:#3640c6;
+}

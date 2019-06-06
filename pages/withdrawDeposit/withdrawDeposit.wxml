@@ -1,0 +1,31 @@
+<!--pages/withdrawDeposit/withdrawDeposit.wxml-->
+
+<view class="container">
+
+  <view class="WD-box-content">
+    <view class="WD-box">
+      <text class="WD-title">积分提现</text>
+      <input type="number" placeholder='10000' placeholder-style='color:#ebebeb;' />
+      <view class="WD-tips">
+        <text>可提现积分总额{{total}}</text>
+        <text>全部提现</text>
+      </view>
+
+    </view>
+
+  </view>
+
+
+
+  <button class="submitBtn" >提现</button>
+
+  <view class="explain-box">
+    <text>    1.默认提现到微信零钱；</text>
+    <text>    2.积分兑换比10:1（如1000积分兑换10元人民币；</text>
+    <text>    3.每月可申请提现2次；</text>
+    <text>    4.申请后一般2个工作日到账，节假日顺延</text>
+  </view>
+
+
+
+</view>

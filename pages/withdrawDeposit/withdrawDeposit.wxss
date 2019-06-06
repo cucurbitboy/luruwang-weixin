@@ -1,0 +1,58 @@
+/* pages/withdrawDeposit/withdrawDeposit.wxss */
+.WD-box{
+  width:92%;
+  margin-left:4%;
+  margin-right: 4%;
+
+}
+.WD-box-content{
+  background: #fff;
+
+}
+.WD-title{
+  display: block;
+  font-size:40rpx;
+  margin-top:60rpx;
+}
+input[type='number']{
+  margin-top:20rpx;
+  border-bottom:solid 1rpx #ccc;
+  display: block;
+  height: 122rpx;
+  font-size:100rpx;
+  color:#a9a9a9;
+}
+.WD-tips{
+  overflow: hidden;
+  margin-top:20rpx;
+}
+.WD-tips text:nth-child(1){
+  float:left;
+  display: block;
+}
+
+.WD-tips text:nth-child(2){
+  float:right;
+  display: block;
+  color:green;
+  margin-bottom: 20rpx;
+}
+
+.explain-box{
+  margin-top:76rpx;
+  width:86%;
+}
+.explain-box text{
+  display: block;
+  color:#5e5e5e;
+  font-size:24rpx;
+}
+.submitBtn{
+  display: block;
+  width:86%;
+  margin-top:90rpx;
+  border-radius: 50rpx;
+  background: #3f64ce;
+  color:#fff;
+
+}

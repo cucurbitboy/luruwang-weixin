@@ -1,0 +1,49 @@
+<!--pages/goRank/goRank.wxml-->
+<view class="container">
+  <view class="rankTab">
+    <text class="{{selected?'blue':'default'}}" bindtap="selected">昨日</text>
+    <text class="{{selected1?'blue':'default'}}" bindtap="selected1">上月</text>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+  <view class='myranks'><text>您昨日的积分排名: {{todayRank}}</text></view>
+    <view class="thead">
+      <text>排名</text>
+      <!-- <text>头像</text> -->
+      <text>用户</text>
+      <text>昨日积分</text>
+    </view>
+    <view class='metc' wx:if="{{!todayItems}}"><text>暂无数据</text></view>
+    <view wx:for="{{todayItems}}" class="item-container"  wx:key="unique">
+      <view class="items">
+        <view class="rankNum">{{item.rank}}</view>
+        <!-- <view> <image class="headPortrait" src="{{item.headPortrait}}"></image></view> -->
+        <view class="rankName">{{item.integralid}}</view>
+        <view class="rankIntegral">{{item.conversionintegral}}</view>
+      </view>
+    </view>
+    <!-- <view class="refresh-block" wx:if="{{loading}}">
+      <image animation="{{refreshAnimation}}" src="../../resources/refresh.png"></image>
+    </view> -->
+
+  </view>
+
+  <view class="{{selected1?'show':'hidden'}}">
+  <view class='myranks'><text>您上月的积分排名: {{monthRank}}</text></view>
+    <view class="thead">
+      <text>排名</text>
+      <!-- <text>头像</text> -->
+      <text>用户</text>
+      <text>上月积分</text>
+    </view>
+    <view class='metc' wx:if="{{!monthItems}}"><text>暂无数据</text></view>
+    <view wx:for="{{monthItems}}" class="item-container"  wx:key="unique">
+      <view class="items">
+        <view class="rankNum">{{item.rank}}</view>
+        <!-- <view> <image class="headPortrait" src="{{item.headPortrait}}"></image></view> -->
+        <view class="rankName">{{item.integralid}}</view>
+        <view class="rankIntegral">{{item.conversionintegral}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

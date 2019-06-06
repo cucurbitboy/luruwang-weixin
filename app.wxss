@@ -1,0 +1,109 @@
+/**app.wxss**/
+page{
+  height:100%;
+  font:normal 30rpx "Arial","黑体","Microsoft YaHei","宋体",sans-serif;
+  background: #f5f5f5;
+}
+.container {
+  height: 100%;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  box-sizing: border-box;
+} 
+.x-y-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.x-center{
+  display: flex;
+  justify-content: center;
+}
+.close-btn{
+  width: 80rpx;
+  height:80rpx;
+  position: absolute;
+  z-index: 4;
+  top:-52rpx;
+  right:-46rpx;
+
+}
+.close-btn image{
+  width:52rpx;
+  height:52rpx;
+} 
+
+.black-model{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  z-index: 100;
+  left:0;
+  top:0;
+}
+.model-content{
+  border-radius: 20rpx;
+  background: #fff;
+  position: relative;
+}
+
+
+/* 公共样式 */
+.flex{
+	display: flex;
+	display: -webkit-box; 
+	/* display: -webkit-flex; */
+}
+.flex_row{
+	flex-direction: row;
+}
+.flex_column{
+	flex-direction: column;
+}
+.flex_wrap{flex-wrap: wrap;}
+/*body 主轴位置*/
+.flex_left{
+	justify-content: flex-start;
+}
+.flex_right{
+	justify-content: flex-end;
+}
+.flex_sa{
+	justify-content: space-around;
+}
+.flex_sb{
+	justify-content: space-between;
+}
+.flex_c{justify-content: center;}
+
+
+.flex1{flex: 1;}
+/*body,纵轴位置*/
+.aic{align-items: center;}
+.ait{align-items: flex-start;}
+.aib{align-items: flex-end;}
+.aif{align-items: stretch;}
+
+/*item,纵轴方向位置*/
+.asc{align-self: center;}
+.ast{align-self: flex-start;}
+.asb{align-self: flex-end;}
+.ass{align-self: stretch;}
+
+.flexs{
+	justify-content: flex-start;
+}
+/*item放大 ,default:0*/
+.fg1{flex-grow: 1;}
+.fg2{flex-grow: 2;}
+.fg3{flex-grow: 3;}
+.fg4{flex-grow: 4;}
+.fg5{flex-grow: 5;}
+/*item缩小 ,default1如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，为0缩小*/
+.fs0{flex-shrink: 0;}
+
+

@@ -1,0 +1,78 @@
+<!--pages/skillPractice/skillPractice.wxml-->
+<view class="container">
+  <view class="all-box">
+    <view class="heag-bg">
+      <image class="image-bg" src="../images/skill_P_head.png"></image>
+      <view class="head-content">
+        <image class="image-star" src="../images/star.png"></image>
+        <view class="skill-progress-box">
+          <view class="skillRank">等级：<text class='rumeng' wx:for="{{skillRank}}" wx:key>{{item}}</text></view>
+          <progress percent="{{percentnumber}}" backgroundColor="#e0e0e0" activeColor="#4ca268" active-mode="backwards" stroke-width="12" />
+          <view class="willRank" bindtap='webTip'>
+            <text>待解锁：</text>
+            <text class='willItem' style='color:orange' wx:for="{{willRank}}" wx:key>{{item}}</text>
+          </view>
+
+        </view>
+
+      </view>
+
+    </view>
+
+    <view class="YY-box">
+      <image src="../images/yingyin.png"></image>
+    </view>
+
+    <scroll-view scroll-y>
+      <!--练习-->
+      <view class="induction">
+        <view style="padding-top:50rpx;"></view>
+        <view class="skill-title">
+          <view class="skill-title-image">
+            <image src='../images/honglj.png'></image>
+          </view>
+          <text>练习</text>
+        </view>
+        <view class="skill-child-box ">
+          <view class="skill-child" wx:for="{{lianxiSlider}}" wx:key="zabc" bindtap='goRedTride' data-skillId='{{item.skillId}}' data-status= '{{item.status}}'>
+            <view class="child-image x-y-center">
+              <image src="../images/honglj2.png"></image>
+              <view class="skill-lock" wx:if="{{item.status == '1'}}">
+                <image src="../images/lock.png"></image>
+              </view>
+            </view>
+            <text class="nametxt">{{item.name}}</text>
+          </view>
+        </view>
+        <view class="wrapper">
+          <view class="wavy-line"></view>
+        </view>
+      </view>
+
+      <!--考核-->
+      <view class="induction">
+        <view style="padding-top:50rpx;"></view>
+        <view class="skill-title">
+          <view class="skill-title-image">
+            <image src='../images/huabanc.png'></image>
+          </view>
+          <text>考核</text>
+        </view>
+        <view class="skill-child-box ">
+          <view class="skill-child" wx:for="{{kaoheSlider}}" wx:key="zabc" bindtap='goYellowTride' data-skillId='{{item.skillId}}' data-status= '{{item.status}}'>
+            <view class="child-image x-y-center">
+              <image src="../images/huabanc2.png"></image>
+              <view class="skill-lock" wx:if="{{item.status != '3'}}">
+                <image src="../images/lock.png"></image>
+              </view>
+            </view>
+            <text class='nametxt'>{{item.name}}</text>
+          </view>
+        </view>
+        <view class="wrapper">
+          <view class="wavy-line"></view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

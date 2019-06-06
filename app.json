@@ -1,0 +1,39 @@
+{
+  "pages": [
+   
+    "pages/login/login",
+    "pages/personalCenter/personalCenter",
+    "pages/skillPractice/skillPractice",
+    
+    "pages/register/register",
+    "pages/index/index",
+    
+    "pages/sindex/sindex",
+    
+    
+    "pages/goExercises/goExercises",
+    
+    
+    "pages/goTest/goTest",
+    "pages/monitor/monitor",
+    
+    "pages/document/document",
+
+    "pages/goRank/goRank",
+    "pages/integralDetail/integralDetail",
+    "pages/InvitationCode/InvitationCode",
+    "pages/withdrawDeposit/withdrawDeposit",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3640c6",
+    "navigationBarTitleText": "啪啦云录入小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  },
+  "resizable": true
+}

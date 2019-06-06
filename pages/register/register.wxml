@@ -1,0 +1,57 @@
+
+<view class='login-bg'>
+  <image src='../images/task_page_bg.png' mode='scaleToFill'></image>
+</view>
+<view class="login-box">
+  <view class='login-title'>
+    <text>啪啦云注册</text>
+  </view>
+  <view>
+    <view class="phone-box yanz">
+      <input placeholder='请输入手机号' placeholder-style="color:#fff;" value="" bindinput="getPhone" type='number' maxlength='11' auto-focus confirm-type="完成" />
+    </view>
+    <view class="yzm-box yanz">
+      <input placeholder='请输入验证码' placeholder-style="color:#fff;" type='number' bindinput="fillCode" />
+       <button class="yzm-btn" disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+    </view>
+
+    <view class="phone-box yanz">
+      <input placeholder='请输入密码' placeholder-style="color:#fff;" value="" bindinput="getPassword" type='password' maxlength='11' auto-focus confirm-type="完成" />
+    </view>
+    <view class="phone-box yanz">
+      <input placeholder='请再输入密码' placeholder-style="color:#fff;" value="" bindinput="getPasswordTow" type='password' maxlength='11' auto-focus confirm-type="完成" />
+    </view>
+    <view class='yaoqincode'>
+      <view class="phone-box yanz">
+        <input placeholder='邀请码' placeholder-style="color:#fff;" value="" bindinput="getinvitationcode" type='text' maxlength='11' auto-focus confirm-type="完成" />
+      </view>
+      <view class='yaoqincode-txt'>
+        <text>没有可以不填</text>
+      </view>
+    </view>
+
+    
+
+    <view class="save-btn">
+      <button bindtap='submitbtn'>注册</button>
+    </view>
+     <view class='tips'>
+      <text bindtap='godocument'>啪啦云使用协议</text>
+      <navigator
+        open-type="redirect"
+        url="/pages/login/login"
+        hover-class="navigator-hover"
+      >
+        已注册，去登陆
+      </navigator>
+      
+    </view>
+    <!-- <view class='overstep' bindtap='overstep'>
+      <text>跳过登陆，到个人中心登陆</text>
+    </view> -->
+
+
+  </view>
+
+
+</view>

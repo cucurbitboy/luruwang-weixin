@@ -1,0 +1,40 @@
+<!--pages/monitor/monitor.wxml-->
+<view class="containers">
+
+  <view class="section">
+    <view class="section__title">请选择监控组:</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <!-- 列表 -->
+  <view class="monitorList" wx:if="{{ismonitorList}}">
+    <!-- <view>
+      <checkbox-group class="list" bindchange="clickall">
+        <label class="checkbox">
+          <checkbox value="all" checked="{{isAllcheck}}" /> {{totalName}}
+        </label>
+      </checkbox-group>
+    </view> -->
+    <scroll-view scroll-y="true">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{monitorList}}" wx:key id="{{item.id}}" data-index="{{item.index}}">
+          <radio value="{{item.id}}" checked='{{item.isListcheck}}' /> {{item.name}}
+        </label>
+      </radio-group>
+    </scroll-view>
+  </view>
+
+
+  <!-- 图表 -->
+  <scroll-view class="canvas-box">
+    <!-- <view class="container">
+      <ec-canvas ec="{{ ec }}" canvas-id="{{item.canvasId}}" wx:for="{{tableList}}" wx:key></ec-canvas>
+    </view> -->
+    <view class="container">
+      <ec-canvas id="mychart-one" canvas-id="mychart-multi-one" ec="{{ ecOne}}"></ec-canvas>
+    </view>
+  </scroll-view>
+</view>

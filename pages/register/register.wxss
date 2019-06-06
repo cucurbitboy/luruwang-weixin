@@ -1,0 +1,111 @@
+/* pages/register/register.wxss */
+
+page{
+  height: 100vh!important;
+}
+
+
+
+.login-bg {
+  height: 100%;
+  width: 100%;
+}
+
+.login-bg image {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.login-box{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 60rpx;
+  background: transparent;
+}
+.login-title{
+  font-size: 70rpx;
+  color: #fff;
+  text-align: center;
+}
+.logo-icon{
+  width:250rpx;
+  height:200rpx;
+  overflow:hidden;
+  margin:0 auto;
+}
+.logo-icon image{
+  width: 100%;
+  height: 85%;
+  vertical-align: middle;
+}
+.phone-box{
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 25rpx;
+  margin: 30rpx;
+  color: #fff;
+  height: 80rpx;
+  flex: 200rpx 0 0;
+}
+.phone-box input{
+  height: 100%;
+  color: #fff;
+  font-size: 30rpx
+}
+.yzm-box{
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  padding: 15rpx 25rpx;
+  margin: 35rpx;
+  color: #fff;
+  display: flex;
+  height: 80rpx;
+}
+.yzm-box input{
+  color: #fff;
+  font-size: 30rpx;
+  height: 100%;
+}
+.yzm-btn{
+  width: 40%;
+  background: #fff;
+  font-size: 32rpx;
+}
+.save-btn{
+  font-size: 35rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 50rpx
+
+}
+.overstep{
+  text-align: center;
+  color: #eee;
+  margin-top: 30rpx;
+}
+
+
+.tips{
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 30rpx;
+  justify-content: space-between;
+}
+.yaoqincode{
+  display: flex;
+  justify-content: flex-start;
+}
+.yaoqincode-txt{
+  color: #fff;
+  font-weight: bold;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,26 @@
+<view wx:if="{{isShow}}" class="vehicle-panel flex flex_sb flex_row" style="background-color:{{backgroundColor}}">
+  <!--键盘左侧 -->
+  <view class="vehicle-panel-row">
+    <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number' bindtap='vehicleTap' data-value="{{item}}" wx:for="{{keyNumber}}" style="border:{{buttonBorder}}" wx:for-index="idx" wx:key="item">{{item}}</view>
+    <!-- 问号 -->
+    <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number towbtn' style="border:{{buttonBorder}}" bindtap='vehicleTap' data-value="?">?</view>
+  </view>
+  <!-- 右侧 -->
+  <view class='vehicle-panel-right flex flex_colum'>
+    <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-img rightbtn' bindtap='vehicleTap' data-value="delete" style="border:{{buttonBorder}}">
+    <image src='./delete.svg' class='vehicle-en-button-delete' mode='aspectFit' bindtap='vehicleTap' data-value="delete">删除</image>
+    </view>
+
+    <view hover-class="vehicle-hover" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number vehicle-panel-ok rightbtn' style="border:{{buttonBorder}}" bindtap='vehicleTap' data-value="ok">提交</view>
+  </view>
+
+  <!-- <view class="">
+    <view hover-class="vehicle-hover" style="border:{{buttonBorder}}" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-number' bindtap='vehicleTap' data-value="?">?</view>
+    <view hover-class="vehicle-hover" style="border:{{buttonBorder}}" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-ok' bindtap='vehicleTap' data-value="ok">确定</view>
+
+    <view hover-class="vehicle-hover" style="border:{{buttonBorder}}" hover-start-time="10" hover-stay-time="100" class='vehicle-panel-row-button vehicle-panel-row-button-img'>
+      <image src='./delete.svg' class='vehicle-en-button-delete' bindtap='vehicleTap' data-value="delete" mode='aspectFit'>删除</image>
+    </view>
+
+  </view> -->
+</view>

@@ -1,0 +1,168 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!--第一部分-->
+  <view class="index_part1 index_part">
+
+    <!--背景图-->
+    <image class="indexbg" src="../images/indexbg_1.jpg"></image>
+
+    <!--用户信息-->
+    <view class="userinfo">
+  
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称</button>
+      <block wx:else> -->
+        <view class="userinfo-box">
+          <view class="userinfo-avatar-box">
+            <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+          </view>
+
+          <view class="name-money-box" catchtap='goIntegralDetail'>
+            <view class="userinfo-nickname">Hello, <open-data type="userNickName" lang="zh_CN"></open-data></view>
+              <!-- <text class="userinfo-nickname">Hello,{{userInfo.nickName}}</text> -->
+              <view class="money-box">
+                <image src="../images/index_money_icon.png"></image>
+                <text>{{integral}}</text>
+              </view>
+            </view>
+          </view>
+      <!-- </block> -->
+    </view>
+
+    <!--我的入口-->
+    <view class="index-user-icon-box" bindtap='personalCenter'>
+      <image src='../images/index_user_icon.png'></image>
+    </view>
+
+    <!--提现和打卡-->
+
+    <!-- <view class="signIn-withdrawDeposit">
+      <text bindtap='showSignIn'>打卡</text>
+      <text bindtap='withdrawDeposit'>提现</text>
+    </view> -->
+
+  </view>
+
+
+  <!--第二部分-->
+
+  <view class="index_part2 index_part" bindtap='goSkillP'>
+
+    <!--背景图-->
+    <image class="indexbg" src="../images/indexbg_2.jpg"></image>
+
+    <view class="skill-title-box">
+      <view class="skill-title ">
+        <text>技能考核</text>
+        <image src="../images/index_triangle.png"></image>
+      </view>
+
+
+      <view class="skill-state ">
+        <text>等级：</text>
+        <text>{{indexSkillState}}</text>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+  <!--第三部分-->
+
+  <view class="index_part3 index_part" bindtap='goTaskPage'>
+
+    <!--背景图-->
+    <image class="indexbg" src="../images/indexbg_3.jpg"></image>
+
+    <view class="task-title-box">
+      <view class="task-title ">
+        <text>赚积分</text>
+        <image src="../images/index_pointer.png"></image>
+      </view>
+
+
+      <view class="task-state ">
+        <text>任务量：</text>
+        <text>{{taskState}}</text>
+      </view>
+
+
+
+    </view>
+
+    <view class="showLock x-y-center" wx:if="{{showLock}}">
+      <image src='../images/index_lock.png'></image>
+    </view>
+
+
+  </view>
+
+
+</view>
+
+
+<!--打卡-->
+<view class="signIn-box x-y-center" wx:if="{{signInShow}}">
+  <view class="day-box">
+
+    <view class="close-btn" catchtap='hideSignIn'>
+      <image src="../images/close_btn.png"></image>
+    </view>
+
+    <view class="signIn_bg-box x-y-center">
+      <image src='../images/signIn_bg.png'></image>
+      <view class="signInStateBox">
+        <text>{{dayIntegrationNum}}</text>
+        <text>{{integralState}}</text>
+      </view>
+    </view>
+
+    <view class="signIn-btn-box">
+      <view class="signIn-btn">
+        <text>第一天</text>
+        <image src='../images/signIn_orange_icon.png'></image>
+        <text>+5积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第二天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+5积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第三天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+5积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第四天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+15积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第五天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+15积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第六天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+15积分</text>
+      </view>
+      <view class="signIn-btn">
+        <text>第七天</text>
+        <image src='../images/signIn_gray_icon.png'></image>
+        <text>+20积分</text>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+
+
+</view>

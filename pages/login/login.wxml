@@ -1,0 +1,35 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='login-bg'>
+  <image src='../images/task_page_bg.png' mode='scaleToFill'></image>
+</view>
+
+<view class="login-box">
+  <view class='logo-icon'>
+    <image src='../images/logo.png'></image>
+  </view>
+
+  <view class='login-title'>
+    <text>啪啦云录入王</text>
+  </view>
+  <view>
+    <view class="phone-box yanz" style="margin-top:56rpx;">
+      <input placeholder='请输入手机号' placeholder-style="color:#fff;" value="" bindinput="getPhone" type='number' maxlength='11' auto-focus confirm-type="完成"/>
+    </view>
+
+    <view class="yzm-box yanz">
+      <input placeholder='请输入密码' placeholder-style="color:#fff;" type='password' bindinput="fillCode" confirm-type="完成" />
+    </view>
+
+    <view class="save-btn">
+      <button bindtap='submitbtn'>登陆</button>
+    </view>
+    <view class='tips'>
+    <view class='overstep' bindtap='overstep'>
+      <text>跳过登陆</text>
+    </view>
+      <navigator url="/pages/register/register" hover-class="navigator-hover" open-type="redirect">
+        还没注册，去注册
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="page-body">
+   <!--第一部分-->
+  <view class="index_part1 index_part">
+    <image class="indexbg" src="../images/indexbg_1.jpg"></image>
+    <!--用户信息-->
+    <view class="userinfo">
+        <view class="userinfo-box">
+          <view class="userinfo-avatar-box">
+            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+          </view>
+          <view class="name-money-box" catchtap='goIntegralDetail'>
+            <view class="userinfo-nickname">Hello, <open-data type="userNickName" lang="zh_CN"></open-data></view>
+              <view class="money-box">
+                <image src="../images/index_money_icon.png"></image>
+                <text>{{integral}}</text>
+              </view>
+            </view>
+          </view>
+    </view>
+  </view>
+  <view class="page-section page-section-spacing swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" indicator-color="">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item">
+            <navigator url="/navigate/navigate?title=navigate" hover-class="navigator-hover">
+              <image mode='{{showImage}}' src="{{item}}"></image>
+            </navigator>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+    
+  </view>
+</view>

@@ -1,0 +1,299 @@
+/*第一部分*/
+
+/*公共部分*/
+.index_part {
+  width: 92%;
+  margin-top: 3.55%;
+  height: 30.3%;
+  position: relative;
+  box-shadow: 20rpx 20rpx 20rpx #e5e5e5;
+  border-radius: 10rpx;
+}
+
+.indexbg {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  font-size: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+/*用户信息*/
+.userinfo {
+  position: absolute;
+  z-index: 1;
+}
+
+.userinfo-box {
+  margin-top: 86rpx;
+  margin-left: 38rpx;
+  height: 131rpx;
+  /*垂直居中*/
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-avatar-box {
+  /*垂直水平居中*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 131rpx;
+  height: 131rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.userinfo-avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  font-size: 0;
+  overflow: hidden;
+}
+.name-money-box{
+   margin-left:20rpx;
+}
+.name-money-box image{
+  width:76rpx;
+  height:56rpx;
+  display: block;
+  float:left;
+}
+.money-box{
+  overflow: hidden;
+}
+.money-box text{
+  float:left;
+  color:#fff;
+  font-size:28rpx;
+  margin-top:14rpx;
+}
+
+.userinfo-nickname {
+  margin-left:10rpx;
+  color: #fff;
+}
+
+/*我的入口*/
+.index-user-icon-box{
+  position: absolute;
+  z-index: 1;
+  top:30rpx;
+  right:40rpx;
+
+}
+.index-user-icon-box image{
+  width:60rpx;
+  height:60rpx;
+}
+
+
+
+/*打卡提现*/
+.signIn-withdrawDeposit{
+  position: absolute;
+  z-index: 1;
+  bottom:30rpx;
+  right: 40rpx;
+
+}
+
+.signIn-withdrawDeposit text{
+  display:inline-block;
+  color:#fff;
+  height:50rpx;
+  line-height: 50rpx;
+  margin-left:30rpx;
+  font:34rpx;
+
+}
+
+.signIn-withdrawDeposit text:nth-child(1){
+  border-right: solid 1rpx #fff;
+  padding-right: 30rpx;
+}
+.signIn-withdrawDeposit text:nth-child(2){
+  margin-right:30rpx;
+}
+
+/*第二部分*/
+
+.skill-title-box{
+  position: absolute;
+  z-index: 1;
+  left:0;
+  top:100rpx;
+  bottom:0;
+  right:0;
+  text-align: center;
+}
+.skill-title text{
+  font:58rpx bold;
+  color:#fff;
+}
+.skill-title image{
+  width:36rpx;
+  height:40rpx;
+}
+.skill-state{
+  margin-top:8rpx;
+  margin-left:-14rpx;
+}
+.skill-state text:nth-child(1){
+  font-size:34rpx;
+  color:#fff;
+}
+.skill-state text:nth-child(2){
+  font-size:34rpx;
+  color:#fdc65b;
+}
+
+
+/*第三部分*/
+.index_part3 .task-title-box{
+  position: absolute; 
+  z-index: 1;
+  text-align: center;
+  left:0;
+  top:25%;
+  bottom:0;
+  right: 0;
+}
+.task-title text{
+  font:58rpx bold;
+  color:#fff;
+}
+.task-title image{
+  width:60rpx;
+  height:60rpx;
+}
+.task-state{
+  margin-top:8rpx;
+ margin-left:-30rpx;
+}
+.task-state text:nth-child(1){
+  font-size:34rpx;
+  color:#fff;
+}
+.task-state text:nth-child(2){
+  font-size:34rpx;
+  color:#fdc65b;
+}
+
+/*赚积分上的蒙版*/
+.showLock{
+  position: absolute;
+  z-index:2;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10rpx;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+.showLock image{
+  width:120rpx;
+  height:234rpx
+}
+
+/*打卡弹窗*/
+ .signIn-box{
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position:absolute;
+  z-index: 10;
+  left:0;
+  top:0;
+}
+.day-box{
+  width:560rpx;
+  height:696rpx;
+  background: #fff;
+  position: relative;
+  border-radius: 10rpx;
+
+
+}
+
+.signIn_bg-box{
+  width:100%;
+  height:210rpx;
+  border-radius: 10rpx;
+  position: relative;
+
+}
+.signIn_bg-box image{
+  position: absolute;
+  z-index: 0;
+  height:100%;
+  width:100%;
+  border-radius: 10rpx;
+}
+.signInStateBox{
+  position: absolute;
+  z-index: 0;
+  
+ 
+}
+.signInStateBox text{
+  display: block;
+}
+.signInStateBox text:nth-child(1){
+    width:220rpx;
+    height: 66rpx;
+    text-align:center;
+    line-height: 66rpx;
+    color:#ffe400;
+    font-size:50rpx;
+    font-weight:300;
+    margin-bottom: 10rpx;
+
+}
+.signInStateBox text:nth-child(2){
+  width:220rpx;
+  height: 66rpx;
+  border: solid 1rpx #fff;
+  text-align:center;
+  line-height: 66rpx;
+  border-radius: 10rpx;
+  color:#fff;
+  font-size:34rpx;
+}
+.signIn-btn text,.signIn-btn image{
+  display: block
+}
+.signIn-btn image{
+  width:86rpx;
+  height:86rpx;
+}
+.signIn-btn text:last-child{
+  margin-top:10rpx;
+  color:red;
+}
+.signIn-btn text:first-child{
+  margin-bottom:5rpx;
+}
+.signIn-btn text{
+  font-size: 24rpx;
+  text-align: center;
+  width:90rpx;
+}
+.signIn-btn-box{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.signIn-btn{
+  margin-left:32rpx;
+  margin-top:40rpx;
+}
+.signIn-btn:nth-child(1){
+  margin-left:58rpx;
+}
+.signIn-btn:nth-child(5){
+  margin-left:116rpx;
+}
